@@ -3,7 +3,7 @@
   "build": {
     "dockerfile": "Dockerfile"
   },
-  "postCreateCommand": "pip install --user -r requirements.txt && dbt deps && dbt seed",
+  "postCreateCommand": "cd dbt_project && dbt deps && dbt seed && dbt build",
   "customizations": {
     "vscode": {
       "extensions": [
