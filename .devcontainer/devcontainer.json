@@ -1,0 +1,16 @@
+{
+  "name": "dbt Analytics Engineer Interview",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "postCreateCommand": "pip install --user -r requirements.txt && dbt deps && dbt seed",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "innoverio.vscode-dbt-power-user",
+        "mechatroner.rainbow-csv"
+      ]
+    }
+  }
+}
